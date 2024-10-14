@@ -1,3 +1,4 @@
 "","OpenTofu","Terraform"
 "License","[MPL 2.0](https://github.com/opentofu/opentofu/blob/main/LICENSE)","[BSL](https://github.com/hashicorp/terraform/blob/main/LICENSE)"
-"State Encryption","true","false"
+"State encryption","true","false"
+"Registry","[search.opentofu.org](https://search.opentofu.org/)","[registry.terraform.io](https://registry.terraform.io/)"
