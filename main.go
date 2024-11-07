@@ -56,7 +56,7 @@ var schemaData = []byte(`{
 
 var tools = []byte(`{
   "opentofu": {
-    "license": "MPL 2.0",
+    "license": "MPL-2.0",
     "registry": "https://search.opentofu.org/",
     "features": [
       {
@@ -108,7 +108,7 @@ var tools = []byte(`{
     ]
   },
   "terraform": {
-    "license": "BSL",
+    "license": "BUSL-1.1",
     "registry": "https://registry.terraform.io/",
     "features": [
       {
