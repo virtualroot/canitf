@@ -88,7 +88,8 @@ var tools = []byte(`{
       },
       {
         "name": "templatefile() and templatestring() recursion",
-        "version": "1.7"
+        "version": "1.7",
+        "url": "https://opentofu.org/docs/language/functions/templatestring/"
       },
       {
         "name": "Backend configuration using locals and variables",
