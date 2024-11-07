@@ -52,7 +52,7 @@
               <td>{{ $matchingTerraformFeature.version }}</td>
               {{ end -}}
             {{ else -}}
-            <td style="text-align: center;">X</td>
+            <td style="text-align: center;">-</td>
             {{ end }}
           </tr>
         {{ end -}}
@@ -67,7 +67,7 @@
           {{ else }}
             <tr>
               <td>{{ $terraformFeature.name }}</td>
-              <td style="text-align: center;">X</td>
+              <td style="text-align: center;">-</td>
               <td><a href="{{ $terraformFeature.url }}">{{ $terraformFeature.version }}</a></td>
             </tr>
           {{ end -}}
