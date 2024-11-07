@@ -131,6 +131,11 @@ var tools = []byte(`{
       {
         "name": "override_resource, override_data, override_module",
         "version": "1.7"
+      },
+      {
+        "name": "Stacks",
+        "version": "1.9",
+        "url": "https://developer.hashicorp.com/terraform/language/stacks"
       }
     ]
   }
