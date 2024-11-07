@@ -60,48 +60,48 @@ var tools = []byte(`{
     "features": [
       {
         "name": "Test",
-        "version": "1.6.0"
+        "version": "1.6"
       },
       {
         "name": "State encryption",
         "url": "https://opentofu.org/docs/language/state/encryption/",
-        "version": "1.7.0"
+        "version": "1.7"
       },
       {
         "name": "Removed block",
-        "version": "1.7.0"
+        "version": "1.7"
       },
       {
         "name": "Provider-defined functions",
-        "version": "1.7.0"
+        "version": "1.7"
       },
       {
         "name": "Configured provider-defined functions",
-        "version": "1.7.0"
+        "version": "1.7"
       },
       {
         "name": "Loopable import blocks",
-        "version": "1.7.0"
+        "version": "1.7"
       },
       {
         "name": "Backend configuration using locals and variables",
-        "version": "1.8.0"
+        "version": "1.8"
       },
       {
         "name": ".tofu extension",
-        "version": "1.8.0"
+        "version": "1.8"
       },
       {
         "name": "Provider mocking",
-        "version": "1.8.0"
+        "version": "1.8"
       },
       {
         "name": "override_resource, override_data, override_module",
-        "version": "1.8.0"
+        "version": "1.8"
       },
       {
         "name": "templatefile() and templatestring() recursion",
-        "version": "1.7.0"
+        "version": "1.7"
       }
     ]
   },
@@ -111,23 +111,23 @@ var tools = []byte(`{
     "features": [
       {
         "name": "Test",
-        "version": "1.6.0"
+        "version": "1.6"
       },
       {
         "name": "Removed block",
-        "version": "1.7.0"
+        "version": "1.7"
       },
       {
         "name": "Provider-defined functions",
-        "version": "1.8.0"
+        "version": "1.8"
       },
       {
         "name": "Provider mocking",
-        "version": "1.7.0"
+        "version": "1.7"
       },
       {
         "name": "override_resource, override_data, override_module",
-        "version": "1.7.0"
+        "version": "1.7"
       }
     ]
   }
