@@ -1,37 +1,81 @@
-{{ define "main" }}
+{{- define "main" }}
 
   <main class="center">
     <div class="content">
       <h1>CanI.TF</h1>
-      {{- $data := dict }}
-      {{- with $file := "canitf.csv" }}
-        {{- with resources.Get $file }}
-          {{ with . | transform.Unmarshal }}
-            <table>
-              <thead>
-                <tr>
-                  {{ range index . 0 }}
-                    <th>{{ . }}</th>
-                  {{ end }}
-                </tr>
-              </thead>
-              <tbody>
-                {{ range after 1 . }}
-                  <tr>
-                    {{- range . }}
-                    <td>{{ if eq . "true" }}{{ replace . "true" "✅" }}{{ else }}{{ replace . "false" "❌" | markdownify }}</td>
-                    {{- end }}
-                    {{- end }}
-                  </tr>
-                {{- end }}
-              </tbody>
-            </table>
+
+      <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>OpenTofu</th>
+          <th>Terraform </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{- $opentofu := .Site.Data.tools.opentofu.features -}}
+        {{- $terraform := .Site.Data.tools.terraform.features -}}
+
+        {{- /* Loop through License */ -}}
+        <tr>
+          <td>License</td>
+          {{ range $toolName, $toolData := .Site.Data.tools }}
+          <td>{{ $toolData.license }}</td>
           {{- end }}
-      {{ else }}
-        {{ errorf "Unable to get resource %q" $file }}
-      {{- end }}
-      {{- end }}
+        </tr>
+        {{- /* Loop through Registry */ -}}
+        <tr>
+          <td>Registry</td>
+          {{ range $toolName, $toolData := .Site.Data.tools }}
+          <td><a href="{{ $toolData.registry }}">{{ $toolName }}</a></td>
+          {{- end }}
+        </tr>
+
+        {{- /* Loop through OpenTofu features */ -}}
+        {{- range $opentofuFeature := $opentofu -}}
+          {{- $matchingTerraformFeatures := where $terraform "name" $opentofuFeature.name -}}
+
+          <tr>
+            <td>{{ $opentofuFeature.name }}</td>
+            {{- if $opentofuFeature.url }}
+            <td><a href="{{ $opentofuFeature.url }}">{{ $opentofuFeature.version }}</a></td>
+            {{ else }}
+            <td>{{ $opentofuFeature.version }}</td>
+            {{ end -}}
+
+            {{- /* Check for matching Terraform feature */ -}}
+            {{- if gt (len $matchingTerraformFeatures) 0 -}}
+              {{- $matchingTerraformFeature := index $matchingTerraformFeatures 0 -}}
+              {{- if $matchingTerraformFeature.url }}
+              <td><a href="{{ $matchingTerraformFeature.url }}">{{ $matchingTerraformFeature.version }}</a></td>
+              {{ else }}
+              <td>{{ $matchingTerraformFeature.version }}</td>
+              {{ end -}}
+            {{ else -}}
+            <td style="text-align: center;">X</td>
+            {{ end }}
+          </tr>
+        {{ end -}}
+
+        {{- /* Loop through Terraform features to check for unmatched features in OpenTofu */ -}}
+        {{- range $terraformFeature := $terraform -}}
+          {{- $matchingOpentofuFeatures := where $opentofu "name" $terraformFeature.name -}}
+
+          {{- /* If no match for this Terraform feature in OpenTofu */ -}}
+          {{- if gt (len $matchingOpentofuFeatures) 0 -}}
+            {{- /* Skip already displayed features */ -}}
+          {{ else }}
+            <tr>
+              <td>{{ $terraformFeature.name }}</td>
+              <td style="text-align: center;">X</td>
+              <td><a href="{{ $terraformFeature.url }}">{{ $terraformFeature.version }}</a></td>
+            </tr>
+          {{ end -}}
+        {{ end -}}
+      </tbody>
+    </table>
+
     </div>
   </main>
 
-{{ end }}
+{{ end -}}
