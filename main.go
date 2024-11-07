@@ -71,7 +71,8 @@ var tools = []byte(`{
       },
       {
         "name": "Removed block",
-        "version": "1.7"
+        "version": "1.7",
+        "url": "https://developer.hashicorp.com/terraform/language/modules/syntax#removing-modules"
       },
       {
         "name": "Provider-defined functions",
@@ -118,7 +119,8 @@ var tools = []byte(`{
       },
       {
         "name": "Removed block",
-        "version": "1.7"
+        "version": "1.7",
+        "url": "https://opentofu.org/docs/language/resources/syntax/#removing-resources"
       },
       {
         "name": "Provider-defined functions",
