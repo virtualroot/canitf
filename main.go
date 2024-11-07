@@ -45,7 +45,7 @@ var schemaData = []byte(`{
                 "maxLength": 3
               }
             },
-						"required": ["name", "version"]
+            "required": ["name", "version"]
           }
         }
       },
