@@ -61,7 +61,8 @@ var tools = []byte(`{
     "features": [
       {
         "name": "Test",
-        "version": "1.6"
+        "version": "1.6",
+        "url": "https://opentofu.org/docs/cli/commands/test/"
       },
       {
         "name": "State encryption",
@@ -112,7 +113,8 @@ var tools = []byte(`{
     "features": [
       {
         "name": "Test",
-        "version": "1.6"
+        "version": "1.6",
+        "url": "https://developer.hashicorp.com/terraform/language/tests"
       },
       {
         "name": "Removed block",
