@@ -162,7 +162,7 @@ func main() {
 	f.Write(tools)
 
 	// allow access to https://cani.tf/tools.json
-	static, err := os.Create("data/tools.json")
+	static, err := os.Create("static/tools.json")
 	if err != nil {
 		panic(err)
 	}
