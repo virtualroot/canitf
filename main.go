@@ -86,6 +86,10 @@ var tools = []byte(`{
         "version": "1.7"
       },
       {
+        "name": "templatefile() and templatestring() recursion",
+        "version": "1.7"
+      },
+      {
         "name": "Backend configuration using locals and variables",
         "version": "1.8"
       },
@@ -100,10 +104,6 @@ var tools = []byte(`{
       {
         "name": "override_resource, override_data, override_module",
         "version": "1.8"
-      },
-      {
-        "name": "templatefile() and templatestring() recursion",
-        "version": "1.7"
       }
     ]
   },
