@@ -41,7 +41,8 @@ var schemaData = []byte(`{
                 "format": "uri"
               },
               "version": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 3
               }
             },
 						"required": ["name", "version"]
