@@ -1,38 +1,43 @@
 {{- define "main" }}
-
+<div class="wrapper">
+  <header>
+    <h1><a href="https://cani.tf/">Can I TF</a></h1>
+    <!-- Place this tag where you want the button to render. -->
+    <a class="github-button" href="https://github.com/virtualroot/canitf"
+      data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large"
+      aria-label="Star virtualroot/canitf on GitHub">Star</a>
+  </header>
   <main class="center">
     <div class="content">
-      <h1><a href="https://github.com/virtualroot/canitf">Can I TF</a></h1>
+      <table aria-label="Comparision of feature support between Terraform and OpenTofu ">
+        <thead>
+          <tr>
+            <th aria-label="feature name"></th>
+            <th>OpenTofu</th>
+            <th>Terraform </th>
+          </tr>
+        </thead>
+        <tbody>
+          {{- $opentofu := .Site.Data.tools.opentofu.features -}}
+          {{- $terraform := .Site.Data.tools.terraform.features -}}
 
-      <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>OpenTofu</th>
-          <th>Terraform </th>
-        </tr>
-      </thead>
-      <tbody>
-        {{- $opentofu := .Site.Data.tools.opentofu.features -}}
-        {{- $terraform := .Site.Data.tools.terraform.features -}}
+          {{- /* Loop through License */ -}}
+          <tr>
+            <td>License</td>
+            {{ range $toolName, $toolData := .Site.Data.tools }}
+            <td>{{ $toolData.license }}</td>
+            {{- end }}
+          </tr>
+          {{- /* Loop through Registry */ -}}
+          <tr>
+            <td>Registry</td>
+            {{ range $toolName, $toolData := .Site.Data.tools }}
+            <td><a href="{{ $toolData.registry }}">{{ $toolName }}</a></td>
+            {{- end }}
+          </tr>
 
-        {{- /* Loop through License */ -}}
-        <tr>
-          <td>License</td>
-          {{ range $toolName, $toolData := .Site.Data.tools }}
-          <td>{{ $toolData.license }}</td>
-          {{- end }}
-        </tr>
-        {{- /* Loop through Registry */ -}}
-        <tr>
-          <td>Registry</td>
-          {{ range $toolName, $toolData := .Site.Data.tools }}
-          <td><a href="{{ $toolData.registry }}">{{ $toolName }}</a></td>
-          {{- end }}
-        </tr>
-
-        {{- /* Loop through OpenTofu features */ -}}
-        {{- range $opentofuFeature := $opentofu -}}
+          {{- /* Loop through OpenTofu features */ -}}
+          {{- range $opentofuFeature := $opentofu -}}
           {{- $matchingTerraformFeatures := where $terraform "name" $opentofuFeature.name -}}
 
           <tr>
@@ -45,38 +50,57 @@
 
             {{- /* Check for matching Terraform feature */ -}}
             {{- if gt (len $matchingTerraformFeatures) 0 -}}
-              {{- $matchingTerraformFeature := index $matchingTerraformFeatures 0 -}}
-              {{- if $matchingTerraformFeature.url }}
-              <td><a href="{{ $matchingTerraformFeature.url }}">{{ $matchingTerraformFeature.version }}</a></td>
-              {{ else }}
-              <td>{{ $matchingTerraformFeature.version }}</td>
-              {{ end -}}
+            {{- $matchingTerraformFeature := index $matchingTerraformFeatures 0 -}}
+            {{- if $matchingTerraformFeature.url }}
+            <td><a href="{{ $matchingTerraformFeature.url }}">{{ $matchingTerraformFeature.version }}</a></td>
+            {{ else }}
+            <td>{{ $matchingTerraformFeature.version }}</td>
+            {{ end -}}
             {{ else -}}
-            <td style="text-align: center;">-</td>
+            <td>-</td>
             {{ end }}
           </tr>
-        {{ end -}}
+          {{ end -}}
 
-        {{- /* Loop through Terraform features to check for unmatched features in OpenTofu */ -}}
-        {{- range $terraformFeature := $terraform -}}
+          {{- /* Loop through Terraform features to check for unmatched features in OpenTofu */ -}}
+          {{- range $terraformFeature := $terraform -}}
           {{- $matchingOpentofuFeatures := where $opentofu "name" $terraformFeature.name -}}
 
           {{- /* If no match for this Terraform feature in OpenTofu */ -}}
           {{- if gt (len $matchingOpentofuFeatures) 0 -}}
-            {{- /* Skip already displayed features */ -}}
+          {{- /* Skip already displayed features */ -}}
           {{ else }}
-            <tr>
-              <td>{{ $terraformFeature.name }}</td>
-              <td style="text-align: center;">-</td>
-              <td><a href="{{ $terraformFeature.url }}">{{ $terraformFeature.version }}</a></td>
-            </tr>
+          <tr>
+            <td>{{ $terraformFeature.name }}</td>
+            <td>-</td>
+            <td><a href="{{ $terraformFeature.url }}">{{ $terraformFeature.version }}</a></td>
+          </tr>
           {{ end -}}
-        {{ end -}}
-      </tbody>
-    </table>
-
+          {{ end -}}
+        </tbody>
+      </table>
     </div>
   </main>
-
+  <footer>
+    <h2>About</h2>
+    <p class="description">As time passes, OpenTofu and Terraform become more distant from each other. <a
+        href="https://github.com/virtualroot/canitf">CanI.TF</a> helps us to understand their differences quickly.</p>
+    <ul class="faq">
+      <li>
+        <h3>How to add a new feature?</h3>
+        <p>To add a new feature or correct a mistake <a href="https://github.com/virtualroot/canitf"> create a Pull
+            Request</a>. </p>
+      </li>
+      <li>
+        <h3>Is this list available in a different format?</h3>
+        <p>Yes, you can get the <a href="https://cani.tf/tools.json">raw JSON</a>.</p>
+      </li>
+      <li>
+        <h3>What's the licence?</h3>
+        <p>Creative Commons Attribution 4.0 International.</p>
+      </li>
+    </ul>
+  </footer>
+</div>
 
 {{ end -}}
