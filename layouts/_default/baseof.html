@@ -1,44 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>cani.tf</title>
-    <meta name="description" content="cani.tf">
-    <style type="text/css">
-      body {
-        font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
-        font-size: 1.25rem;
-        font-weight: normal;
-        background-color: #F9F9F9;
-      }
-      .center {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      th, td {
-        padding: 10px;
-        border-bottom: 1px solid #999999;
-      }
-      th {
-        width: 220px;
-      }
-      td {
-        vertical-align: center;
-        text-align: center;
-      }
-      a, a:visited {
-        color: #54792A;
-      }
-      a:hover {
-        text-decoration: underline #83bc42 solid;
-        color: #83bc42;
-      }
-     </style>
-  </head>
-  <body>
-    {{block "main" .}} {{ end }}
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>cani.tf</title>
+  <meta name="description" content="cani.tf">
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <style type="text/css">
+    body {
+      font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+      font-size: 1.25rem;
+      font-weight: normal;
+      background-color: #F9F9F9;
+    }
+
+    .wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      border-bottom: 1px solid #999;
+    }
+
+    tr:last-child td {
+      border: none;
+    }
+
+    th {
+      max-width: 220px;
+    }
+
+    td {
+      word-wrap: anywhere;
+      text-align: center;
+    }
+
+    tbody tr:hover {
+      background-color: #eee;
+    }
+
+    a,
+    a:visited {
+      color: #54792A;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: #65a121;
+    }
+
+    a:focus {
+      outline: darkgreen solid 3px;
+      border-radius: 3px;
+      outline-offset: 4px;
+      transition: all linear 150ms;
+    }
+
+    footer {
+      margin: 10px;
+      padding: 10px;
+    }
+
+    footer .description {
+      font-style: italic;
+    }
+
+    ul,
+    li {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      border-bottom: #ccc solid 1px;
+      padding: 5px 0;
+    }
+
+    li:last-child {
+      border: none;
+    }
+
+    ::selection {
+      color: white;
+      background: darkgreen;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  {{block "main" .}} {{ end }}
+</body>
+
 </html>
