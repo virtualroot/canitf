@@ -144,6 +144,11 @@ var tools = []byte(`{
 	      "name": "templatefile() and templatestring() recursion",
 	      "version": "1.9",
 	      "url": "https://developer.hashicorp.com/terraform/language/functions/templatestring"
+      },
+      {
+        "name": "Loopable import blocks",
+        "version": "1.7",
+        "url": "https://developer.hashicorp.com/terraform/language/v1.7.x/import#import-multiple-instances-with-for_each"
       }
     ]
   }
