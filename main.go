@@ -84,7 +84,8 @@ var tools = []byte(`{
       },
       {
         "name": "Loopable import blocks",
-        "version": "1.7"
+        "version": "1.7",
+        "url": "https://opentofu.org/docs/v1.7/language/import/#importing-multiple-resources"
       },
       {
         "name": "templatefile() and templatestring() recursion",
