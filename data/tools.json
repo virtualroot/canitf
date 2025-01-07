@@ -81,7 +81,7 @@
         "version": "1.7"
       },
       {
-        "name": "Stacks",
+        "name": "Stacks*",
         "version": "1.9",
         "url": "https://developer.hashicorp.com/terraform/language/stacks"
       },
