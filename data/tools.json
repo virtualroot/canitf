@@ -1,6 +1,7 @@
 {
   "opentofu": {
     "license": "MPL-2.0",
+    "licenseURL": "https://github.com/opentofu/opentofu/blob/main/LICENSE",
     "registry": "https://search.opentofu.org/",
     "features": [
       {
@@ -56,6 +57,7 @@
   },
   "terraform": {
     "license": "BUSL-1.1",
+    "licenseURL": "https://github.com/hashicorp/terraform/blob/main/LICENSE",
     "registry": "https://registry.terraform.io/",
     "features": [
       {
