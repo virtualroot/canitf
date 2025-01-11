@@ -24,6 +24,10 @@ var schemaData = []byte(`{
         "license": {
           "type": "string"
         },
+        "licenseURL": {
+          "type": "string",
+          "format": "uri"
+        },
         "registry": {
           "type": "string",
           "format": "uri"
@@ -57,6 +61,7 @@ var schemaData = []byte(`{
 var tools = []byte(`{
   "opentofu": {
     "license": "MPL-2.0",
+    "licenseURL": "https://github.com/opentofu/opentofu/blob/main/LICENSE",
     "registry": "https://search.opentofu.org/",
     "features": [
       {
@@ -112,6 +117,7 @@ var tools = []byte(`{
   },
   "terraform": {
     "license": "BUSL-1.1",
+    "licenseURL": "https://github.com/hashicorp/terraform/blob/main/LICENSE",
     "registry": "https://registry.terraform.io/",
     "features": [
       {
@@ -137,7 +143,7 @@ var tools = []byte(`{
         "version": "1.7"
       },
       {
-        "name": "Stacks",
+        "name": "Stacks*",
         "version": "1.9",
         "url": "https://developer.hashicorp.com/terraform/language/stacks"
       },

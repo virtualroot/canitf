@@ -25,7 +25,7 @@
           <tr>
             <td>License</td>
             {{ range $toolName, $toolData := .Site.Data.tools }}
-            <td>{{ $toolData.license }}</td>
+            <td><a href="{{ $toolData.licenseURL }}">{{ $toolData.license }}</a></td>
             {{- end }}
           </tr>
           {{- /* Loop through Registry */ -}}
