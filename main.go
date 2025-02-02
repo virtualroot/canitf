@@ -46,7 +46,7 @@ var schemaData = []byte(`{
               },
               "version": {
                 "type": "string",
-                "maxLength": 3
+                "maxLength": 4
               }
             },
             "required": ["name", "version"]
@@ -151,6 +151,16 @@ var tools = []byte(`{
         "name": "templatefile() and templatestring() recursion",
         "version": "1.9",
         "url": "https://developer.hashicorp.com/terraform/language/functions/templatestring"
+      },
+      {
+        "name": "Ephemeral values and resources",
+        "version": "1.10",
+        "url": "https://developer.hashicorp.com/terraform/language/resources/ephemeral"
+      },
+      {
+        "name": "S3 native state locking",
+        "version": "1.10",
+        "url": "https://developer.hashicorp.com/terraform/language/v1.10.x/upgrade-guides#s3-backend"
       },
       {
         "name": "Loopable import blocks",
