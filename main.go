@@ -112,6 +112,16 @@ var tools = []byte(`{
       {
         "name": "override_resource, override_data, override_module",
         "version": "1.8"
+      },
+      {
+        "name": "Provider iteration with for_each",
+        "version": "1.9",
+        "url": "https://opentofu.org/docs/intro/whats-new/#provider-iteration-for_each"
+      },
+      {
+        "name": "-exclude flag",
+        "version": "1.9",
+        "url": "https://opentofu.org/docs/intro/whats-new/#the--exclude-flag"
       }
     ]
   },
