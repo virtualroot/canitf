@@ -161,11 +161,6 @@ var tools = []byte(`{
         "version": "1.7"
       },
       {
-        "name": "Stacks*",
-        "version": "1.9",
-        "url": "https://developer.hashicorp.com/terraform/language/stacks"
-      },
-      {
         "name": "templatefile() and templatestring() recursion",
         "version": "1.9",
         "url": "https://developer.hashicorp.com/terraform/language/functions/templatestring"
