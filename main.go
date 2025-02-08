@@ -21,6 +21,10 @@ var schemaData = []byte(`{
     "tool": {
       "type": "object",
       "properties": {
+        "version": {
+          "type": "string",
+          "maxLength": 4
+        },
         "license": {
           "type": "string"
         },
@@ -53,13 +57,15 @@ var schemaData = []byte(`{
           }
         }
       },
-      "required": ["license", "registry", "features"]
+      "required": ["version", "versionURL", "license", "licenseURL", "registry", "features"]
     }
   }
 }`)
 
 var tools = []byte(`{
   "opentofu": {
+    "version": "1.9",
+    "versionURL": "https://github.com/opentofu/opentofu/releases/latest",
     "license": "MPL-2.0",
     "licenseURL": "https://github.com/opentofu/opentofu/blob/main/LICENSE",
     "registry": "https://search.opentofu.org/",
@@ -77,7 +83,7 @@ var tools = []byte(`{
       {
         "name": "Removed block",
         "version": "1.7",
-        "url": "https://developer.hashicorp.com/terraform/language/modules/syntax#removing-modules"
+        "url": "https://opentofu.org/docs/language/resources/syntax/#removing-resources"
       },
       {
         "name": "Provider-defined functions",
@@ -126,6 +132,8 @@ var tools = []byte(`{
     ]
   },
   "terraform": {
+    "version": "1.10",
+    "versionURL": "https://github.com/hashicorp/terraform/releases/latest",
     "license": "BUSL-1.1",
     "licenseURL": "https://github.com/hashicorp/terraform/blob/main/LICENSE",
     "registry": "https://registry.terraform.io/",
@@ -138,7 +146,7 @@ var tools = []byte(`{
       {
         "name": "Removed block",
         "version": "1.7",
-        "url": "https://opentofu.org/docs/language/resources/syntax/#removing-resources"
+        "url": "https://developer.hashicorp.com/terraform/language/modules/syntax#removing-modules"
       },
       {
         "name": "Provider-defined functions",
