@@ -21,6 +21,13 @@
           {{- $opentofu := .Site.Data.tools.opentofu.features -}}
           {{- $terraform := .Site.Data.tools.terraform.features -}}
 
+          {{- /* Loop through Version */ -}}
+          <tr>
+            <td>Version</td>
+            {{ range $toolName, $toolData := .Site.Data.tools }}
+            <td><a href="{{ $toolData.versionURL }}">{{ $toolData.version }}</a></td>
+            {{- end }}
+          </tr>
           {{- /* Loop through License */ -}}
           <tr>
             <td>License</td>
