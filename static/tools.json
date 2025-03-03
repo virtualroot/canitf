@@ -68,7 +68,7 @@
     ]
   },
   "terraform": {
-    "version": "1.10",
+    "version": "1.11",
     "versionURL": "https://github.com/hashicorp/terraform/releases/latest",
     "license": "BUSL-1.1",
     "licenseURL": "https://github.com/hashicorp/terraform/blob/main/LICENSE",
@@ -110,6 +110,11 @@
         "name": "S3 native state locking",
         "version": "1.10",
         "url": "https://developer.hashicorp.com/terraform/language/v1.10.x/upgrade-guides#s3-backend"
+      },
+      {
+        "name": "Write-only attributes",
+        "version": "1.11",
+        "url": "https://developer.hashicorp.com/terraform/language/resources/ephemeral/write-only"
       },
       {
         "name": "Loopable import blocks",
