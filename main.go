@@ -132,7 +132,7 @@ var tools = []byte(`{
     ]
   },
   "terraform": {
-    "version": "1.11",
+    "version": "1.12",
     "versionURL": "https://github.com/hashicorp/terraform/releases/latest",
     "license": "BUSL-1.1",
     "licenseURL": "https://github.com/hashicorp/terraform/blob/main/LICENSE",
