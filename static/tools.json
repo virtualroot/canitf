@@ -120,6 +120,16 @@
         "name": "Loopable import blocks",
         "version": "1.7",
         "url": "https://developer.hashicorp.com/terraform/language/v1.7.x/import#import-multiple-instances-with-for_each"
+      },
+      {
+        "name": "Import via identity attribute",
+        "version": "1.12",
+        "url": "https://developer.hashicorp.com/terraform/plugin/framework/resources/identity"
+      },
+      {
+        "name": "Terraform backend OCI Object Storage",
+        "version": "1.12",
+        "url": "https://developer.hashicorp.com/terraform/language/backend/oci"
       }
     ]
   }
