@@ -127,7 +127,7 @@
         "url": "https://developer.hashicorp.com/terraform/plugin/framework/resources/identity"
       },
       {
-        "name": "Terraform backend OCI Object Storage",
+        "name": "Backend implementation for Oracle Cloud Infrastructure (OCI) Object Storage",
         "version": "1.12",
         "url": "https://developer.hashicorp.com/terraform/language/backend/oci"
       }
