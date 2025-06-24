@@ -64,7 +64,7 @@ var schemaData = []byte(`{
 
 var tools = []byte(`{
   "opentofu": {
-    "version": "1.9",
+    "version": "1.10",
     "versionURL": "https://github.com/opentofu/opentofu/releases/latest",
     "license": "MPL-2.0",
     "licenseURL": "https://github.com/opentofu/opentofu/blob/main/LICENSE",
@@ -128,6 +128,11 @@ var tools = []byte(`{
         "name": "-exclude flag",
         "version": "1.9",
         "url": "https://opentofu.org/docs/intro/whats-new/#the--exclude-flag"
+      },
+      {
+        "name": "S3 native state locking",
+        "version": "1.10",
+        "url": "https://opentofu.org/docs/intro/whats-new/#native-s3-state-locking"
       }
     ]
   },
