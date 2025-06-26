@@ -133,6 +133,26 @@ var tools = []byte(`{
         "name": "S3 native state locking",
         "version": "1.10",
         "url": "https://opentofu.org/docs/intro/whats-new/#native-s3-state-locking"
+      },
+      {
+        "name": "OCI registry support",
+        "version": "1.10",
+        "url": "https://opentofu.org/docs/cli/oci_registries/"
+      },
+      {
+        "name": "Target and exclude files",
+        "version": "1.10",
+        "url": "https://opentofu.org/docs/intro/whats-new/#target-and-exclude-files"
+      },
+      {
+        "name": "Enhanced moved and removed blocks",
+        "version": "1.10",
+        "url": "https://opentofu.org/docs/intro/whats-new/#enhanced-moved-and-removed-blocks"
+      },
+      {
+        "name": "External key providers",
+        "version": "1.10",
+        "url": "https://opentofu.org/docs/intro/whats-new/#external-key-providers"
       }
     ]
   },
