@@ -157,7 +157,7 @@ var tools = []byte(`{
     ]
   },
   "terraform": {
-    "version": "1.13",
+    "version": "1.14",
     "versionURL": "https://github.com/hashicorp/terraform/releases/latest",
     "license": "BUSL-1.1",
     "licenseURL": "https://github.com/hashicorp/terraform/blob/main/LICENSE",
@@ -219,6 +219,16 @@ var tools = []byte(`{
         "name": "Backend implementation for Oracle Cloud Infrastructure (OCI) Object Storage",
         "version": "1.12",
         "url": "https://developer.hashicorp.com/terraform/language/backend/oci"
+      },
+      {
+        "name": "Search for resources in a declarative way",
+        "version": "1.14",
+        "url": "https://developer.hashicorp.com/terraform/cli/commands/query"
+      },
+      {
+        "name": "Actions for performing day-two operations",
+        "version": "1.14",
+        "url": "https://developer.hashicorp.com/terraform/language/invoke-actions"
       }
     ]
   }
