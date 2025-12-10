@@ -64,7 +64,7 @@ var schemaData = []byte(`{
 
 var tools = []byte(`{
   "opentofu": {
-    "version": "1.10",
+    "version": "1.11",
     "versionURL": "https://github.com/opentofu/opentofu/releases/latest",
     "license": "MPL-2.0",
     "licenseURL": "https://github.com/opentofu/opentofu/blob/main/LICENSE",
@@ -153,6 +153,16 @@ var tools = []byte(`{
         "name": "External key providers",
         "version": "1.10",
         "url": "https://opentofu.org/docs/intro/whats-new/#external-key-providers"
+      },
+      {
+        "name": "Ephemeral values and write-only arguments",
+        "version": "1.11",
+        "url": "https://opentofu.org/docs/language/ephemerality/ephemeral-resources/"
+      },
+      {
+        "name": "Enabled for resources and modules",
+        "version": "1.11",
+        "url": "https://opentofu.org/docs/language/meta-arguments/enabled/"
       }
     ]
   },
@@ -191,7 +201,7 @@ var tools = []byte(`{
         "url": "https://developer.hashicorp.com/terraform/language/functions/templatestring"
       },
       {
-        "name": "Ephemeral values and resources",
+        "name": "Ephemeral values and write-only arguments",
         "version": "1.10",
         "url": "https://developer.hashicorp.com/terraform/language/resources/ephemeral"
       },
