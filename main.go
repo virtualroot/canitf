@@ -155,9 +155,14 @@ var tools = []byte(`{
         "url": "https://opentofu.org/docs/intro/whats-new/#external-key-providers"
       },
       {
-        "name": "Ephemeral values and write-only arguments",
+        "name": "Ephemeral values and resources",
         "version": "1.11",
         "url": "https://opentofu.org/docs/language/ephemerality/ephemeral-resources/"
+      },
+      {
+        "name": "Write-only attributes",
+        "version": "1.11",
+        "url": "https://opentofu.org/docs/main/language/ephemerality/write-only-attributes/"
       },
       {
         "name": "Enabled for resources and modules",
@@ -201,7 +206,7 @@ var tools = []byte(`{
         "url": "https://developer.hashicorp.com/terraform/language/functions/templatestring"
       },
       {
-        "name": "Ephemeral values and write-only arguments",
+        "name": "Ephemeral values and resources",
         "version": "1.10",
         "url": "https://developer.hashicorp.com/terraform/language/resources/ephemeral"
       },
