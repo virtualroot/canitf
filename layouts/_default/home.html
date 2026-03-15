@@ -51,8 +51,12 @@
             <td>{{ $opentofuFeature.name }}</td>
             {{- if $opentofuFeature.url }}
             <td><a href="{{ $opentofuFeature.url }}">{{ $opentofuFeature.version }}</a></td>
-            {{ else }}
+            {{ else if $opentofuFeature.version }}
             <td>{{ $opentofuFeature.version }}</td>
+            {{ else if $opentofuFeature.featureRequestURL }}
+            <td><a href="{{ $opentofuFeature.featureRequestURL }}">?</a></td>
+            {{ else }}
+            <td>-</td>
             {{ end -}}
 
             {{- /* Check for matching Terraform feature */ -}}
@@ -60,8 +64,12 @@
             {{- $matchingTerraformFeature := index $matchingTerraformFeatures 0 -}}
             {{- if $matchingTerraformFeature.url }}
             <td><a href="{{ $matchingTerraformFeature.url }}">{{ $matchingTerraformFeature.version }}</a></td>
-            {{ else }}
+            {{ else if $matchingTerraformFeature.version }}
             <td>{{ $matchingTerraformFeature.version }}</td>
+            {{ else if $matchingTerraformFeature.featureRequestURL }}
+            <td><a href="{{ $matchingTerraformFeature.featureRequestURL }}">?</a></td>
+            {{ else }}
+            <td>-</td>
             {{ end -}}
             {{ else -}}
             <td>-</td>
@@ -80,7 +88,15 @@
           <tr>
             <td>{{ $terraformFeature.name }}</td>
             <td>-</td>
+            {{- if $terraformFeature.url }}
             <td><a href="{{ $terraformFeature.url }}">{{ $terraformFeature.version }}</a></td>
+            {{ else if $terraformFeature.version }}
+            <td>{{ $terraformFeature.version }}</td>
+            {{ else if $terraformFeature.featureRequestURL }}
+            <td><a href="{{ $terraformFeature.featureRequestURL }}">?</a></td>
+            {{ else }}
+            <td>-</td>
+            {{ end }}
           </tr>
           {{ end -}}
           {{ end -}}

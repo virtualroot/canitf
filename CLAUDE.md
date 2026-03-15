@@ -30,7 +30,7 @@ Hugo version is pinned via `.tool-versions` (hugo 0.135.0). Install with `asdf i
 
 ## Data Schema
 
-Each tool entry has: `version`, `versionURL`, `license`, `licenseURL`, `registry`, and `features[]`. Each feature has `name`, `version`, and optional `url`. Feature names are matched by string equality across tools to build the comparison table — a feature present in one tool but not the other renders as `-`.
+Each tool entry has: `version`, `versionURL`, `license`, `licenseURL`, `registry`, and `features[]`. Each feature has `name` (required), and optional `version`, `url`, and `featureRequestURL`. Feature names are matched by string equality across tools to build the comparison table — a feature present in one tool but not the other renders as `-`. A `featureRequestURL` with no `version` renders as a `?` link.
 
 ## Deployment
 
