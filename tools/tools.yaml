@@ -1,0 +1,161 @@
+tools:
+  opentofu:
+    version: "1.11"
+    versionURL: https://github.com/opentofu/opentofu/releases/latest
+    license: MPL-2.0
+    licenseURL: https://github.com/opentofu/opentofu/blob/main/LICENSE
+    registry: https://search.opentofu.org/
+  terraform:
+    version: "1.14"
+    versionURL: https://github.com/hashicorp/terraform/releases/latest
+    license: BUSL-1.1
+    licenseURL: https://github.com/hashicorp/terraform/blob/main/LICENSE
+    registry: https://registry.terraform.io/
+
+features:
+  - name: Test
+    tools:
+      opentofu:
+        version: "1.6"
+        url: https://opentofu.org/docs/cli/commands/test/
+      terraform:
+        version: "1.6"
+        url: https://developer.hashicorp.com/terraform/language/tests
+  - name: State encryption
+    tools:
+      opentofu:
+        version: "1.7"
+        url: https://opentofu.org/docs/language/state/encryption/
+  - name: Removed block
+    tools:
+      opentofu:
+        version: "1.7"
+        url: https://opentofu.org/docs/language/resources/syntax/#removing-resources
+      terraform:
+        version: "1.7"
+        url: https://developer.hashicorp.com/terraform/language/modules/syntax#removing-modules
+  - name: Provider-defined functions
+    tools:
+      opentofu:
+        version: "1.7"
+      terraform:
+        version: "1.8"
+  - name: Configured provider-defined functions
+    tools:
+      opentofu:
+        version: "1.7"
+  - name: Loopable import blocks
+    tools:
+      opentofu:
+        version: "1.7"
+        url: https://opentofu.org/docs/v1.7/language/import/#importing-multiple-resources
+      terraform:
+        version: "1.7"
+        url: https://developer.hashicorp.com/terraform/language/v1.7.x/import#import-multiple-instances-with-for_each
+  - name: "templatefile() and templatestring() recursion"
+    tools:
+      opentofu:
+        version: "1.7"
+        url: https://opentofu.org/docs/language/functions/templatestring/
+      terraform:
+        version: "1.9"
+        url: https://developer.hashicorp.com/terraform/language/functions/templatestring
+  - name: Backend configuration using locals and variables
+    tools:
+      opentofu:
+        version: "1.8"
+  - name: .tofu extension
+    tools:
+      opentofu:
+        version: "1.8"
+  - name: Provider mocking
+    tools:
+      opentofu:
+        version: "1.8"
+      terraform:
+        version: "1.7"
+  - name: "override_resource, override_data, override_module"
+    tools:
+      opentofu:
+        version: "1.8"
+      terraform:
+        version: "1.7"
+  - name: Provider iteration with for_each
+    tools:
+      opentofu:
+        version: "1.9"
+        url: https://opentofu.org/docs/intro/whats-new/#provider-iteration-for_each
+  - name: -exclude flag
+    tools:
+      opentofu:
+        version: "1.9"
+        url: https://opentofu.org/docs/intro/whats-new/#the--exclude-flag
+  - name: S3 native state locking
+    tools:
+      opentofu:
+        version: "1.10"
+        url: https://opentofu.org/docs/intro/whats-new/#native-s3-state-locking
+      terraform:
+        version: "1.10"
+        url: https://developer.hashicorp.com/terraform/language/v1.10.x/upgrade-guides#s3-backend
+  - name: OCI registry support
+    tools:
+      opentofu:
+        version: "1.10"
+        url: https://opentofu.org/docs/cli/oci_registries/
+  - name: Target and exclude files
+    tools:
+      opentofu:
+        version: "1.10"
+        url: https://opentofu.org/docs/intro/whats-new/#target-and-exclude-files
+  - name: Enhanced moved and removed blocks
+    tools:
+      opentofu:
+        version: "1.10"
+        url: https://opentofu.org/docs/intro/whats-new/#enhanced-moved-and-removed-blocks
+  - name: External key providers
+    tools:
+      opentofu:
+        version: "1.10"
+        url: https://opentofu.org/docs/intro/whats-new/#external-key-providers
+  - name: Ephemeral values and resources
+    tools:
+      opentofu:
+        version: "1.11"
+        url: https://opentofu.org/docs/language/ephemerality/ephemeral-resources/
+      terraform:
+        version: "1.10"
+        url: https://developer.hashicorp.com/terraform/language/resources/ephemeral
+  - name: Write-only attributes
+    tools:
+      opentofu:
+        version: "1.11"
+        url: https://opentofu.org/docs/main/language/ephemerality/write-only-attributes/
+      terraform:
+        version: "1.11"
+        url: https://developer.hashicorp.com/terraform/language/resources/ephemeral/write-only
+  - name: Enabled for resources and modules
+    tools:
+      opentofu:
+        version: "1.11"
+        url: https://opentofu.org/docs/language/meta-arguments/enabled/
+  - name: Import via identity attribute
+    tools:
+      terraform:
+        version: "1.12"
+        url: https://developer.hashicorp.com/terraform/plugin/framework/resources/identity
+  - name: Backend implementation for Oracle Cloud Infrastructure (OCI) Object Storage
+    tools:
+      terraform:
+        version: "1.12"
+        url: https://developer.hashicorp.com/terraform/language/backend/oci
+  - name: Search for resources in a declarative way
+    tools:
+      terraform:
+        version: "1.14"
+        url: https://developer.hashicorp.com/terraform/cli/commands/query
+  - name: Actions for performing day-two operations
+    tools:
+      terraform:
+        version: "1.14"
+        url: https://developer.hashicorp.com/terraform/language/invoke-actions

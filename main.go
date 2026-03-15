@@ -7,6 +7,7 @@ import (
 	"os"
 
 	"github.com/qri-io/jsonschema"
+	"gopkg.in/yaml.v3"
 )
 
 var schemaData = []byte(`{
@@ -62,203 +63,84 @@ var schemaData = []byte(`{
   }
 }`)
 
-var tools = []byte(`{
-  "opentofu": {
-    "version": "1.11",
-    "versionURL": "https://github.com/opentofu/opentofu/releases/latest",
-    "license": "MPL-2.0",
-    "licenseURL": "https://github.com/opentofu/opentofu/blob/main/LICENSE",
-    "registry": "https://search.opentofu.org/",
-    "features": [
-      {
-        "name": "Test",
-        "version": "1.6",
-        "url": "https://opentofu.org/docs/cli/commands/test/"
-      },
-      {
-        "name": "State encryption",
-        "url": "https://opentofu.org/docs/language/state/encryption/",
-        "version": "1.7"
-      },
-      {
-        "name": "Removed block",
-        "version": "1.7",
-        "url": "https://opentofu.org/docs/language/resources/syntax/#removing-resources"
-      },
-      {
-        "name": "Provider-defined functions",
-        "version": "1.7"
-      },
-      {
-        "name": "Configured provider-defined functions",
-        "version": "1.7"
-      },
-      {
-        "name": "Loopable import blocks",
-        "version": "1.7",
-        "url": "https://opentofu.org/docs/v1.7/language/import/#importing-multiple-resources"
-      },
-      {
-        "name": "templatefile() and templatestring() recursion",
-        "version": "1.7",
-        "url": "https://opentofu.org/docs/language/functions/templatestring/"
-      },
-      {
-        "name": "Backend configuration using locals and variables",
-        "version": "1.8"
-      },
-      {
-        "name": ".tofu extension",
-        "version": "1.8"
-      },
-      {
-        "name": "Provider mocking",
-        "version": "1.8"
-      },
-      {
-        "name": "override_resource, override_data, override_module",
-        "version": "1.8"
-      },
-      {
-        "name": "Provider iteration with for_each",
-        "version": "1.9",
-        "url": "https://opentofu.org/docs/intro/whats-new/#provider-iteration-for_each"
-      },
-      {
-        "name": "-exclude flag",
-        "version": "1.9",
-        "url": "https://opentofu.org/docs/intro/whats-new/#the--exclude-flag"
-      },
-      {
-        "name": "S3 native state locking",
-        "version": "1.10",
-        "url": "https://opentofu.org/docs/intro/whats-new/#native-s3-state-locking"
-      },
-      {
-        "name": "OCI registry support",
-        "version": "1.10",
-        "url": "https://opentofu.org/docs/cli/oci_registries/"
-      },
-      {
-        "name": "Target and exclude files",
-        "version": "1.10",
-        "url": "https://opentofu.org/docs/intro/whats-new/#target-and-exclude-files"
-      },
-      {
-        "name": "Enhanced moved and removed blocks",
-        "version": "1.10",
-        "url": "https://opentofu.org/docs/intro/whats-new/#enhanced-moved-and-removed-blocks"
-      },
-      {
-        "name": "External key providers",
-        "version": "1.10",
-        "url": "https://opentofu.org/docs/intro/whats-new/#external-key-providers"
-      },
-      {
-        "name": "Ephemeral values and resources",
-        "version": "1.11",
-        "url": "https://opentofu.org/docs/language/ephemerality/ephemeral-resources/"
-      },
-      {
-        "name": "Write-only attributes",
-        "version": "1.11",
-        "url": "https://opentofu.org/docs/main/language/ephemerality/write-only-attributes/"
-      },
-      {
-        "name": "Enabled for resources and modules",
-        "version": "1.11",
-        "url": "https://opentofu.org/docs/language/meta-arguments/enabled/"
-      }
-    ]
-  },
-  "terraform": {
-    "version": "1.14",
-    "versionURL": "https://github.com/hashicorp/terraform/releases/latest",
-    "license": "BUSL-1.1",
-    "licenseURL": "https://github.com/hashicorp/terraform/blob/main/LICENSE",
-    "registry": "https://registry.terraform.io/",
-    "features": [
-      {
-        "name": "Test",
-        "version": "1.6",
-        "url": "https://developer.hashicorp.com/terraform/language/tests"
-      },
-      {
-        "name": "Removed block",
-        "version": "1.7",
-        "url": "https://developer.hashicorp.com/terraform/language/modules/syntax#removing-modules"
-      },
-      {
-        "name": "Provider-defined functions",
-        "version": "1.8"
-      },
-      {
-        "name": "Provider mocking",
-        "version": "1.7"
-      },
-      {
-        "name": "override_resource, override_data, override_module",
-        "version": "1.7"
-      },
-      {
-        "name": "templatefile() and templatestring() recursion",
-        "version": "1.9",
-        "url": "https://developer.hashicorp.com/terraform/language/functions/templatestring"
-      },
-      {
-        "name": "Ephemeral values and resources",
-        "version": "1.10",
-        "url": "https://developer.hashicorp.com/terraform/language/resources/ephemeral"
-      },
-      {
-        "name": "S3 native state locking",
-        "version": "1.10",
-        "url": "https://developer.hashicorp.com/terraform/language/v1.10.x/upgrade-guides#s3-backend"
-      },
-      {
-        "name": "Write-only attributes",
-        "version": "1.11",
-        "url": "https://developer.hashicorp.com/terraform/language/resources/ephemeral/write-only"
-      },
-      {
-        "name": "Loopable import blocks",
-        "version": "1.7",
-        "url": "https://developer.hashicorp.com/terraform/language/v1.7.x/import#import-multiple-instances-with-for_each"
-      },
-      {
-        "name": "Import via identity attribute",
-        "version": "1.12",
-        "url": "https://developer.hashicorp.com/terraform/plugin/framework/resources/identity"
-      },
-      {
-        "name": "Backend implementation for Oracle Cloud Infrastructure (OCI) Object Storage",
-        "version": "1.12",
-        "url": "https://developer.hashicorp.com/terraform/language/backend/oci"
-      },
-      {
-        "name": "Search for resources in a declarative way",
-        "version": "1.14",
-        "url": "https://developer.hashicorp.com/terraform/cli/commands/query"
-      },
-      {
-        "name": "Actions for performing day-two operations",
-        "version": "1.14",
-        "url": "https://developer.hashicorp.com/terraform/language/invoke-actions"
-      }
-    ]
-  }
+type Feature struct {
+	Name    string `json:"name" yaml:"name"`
+	Version string `json:"version" yaml:"version"`
+	URL     string `json:"url,omitempty" yaml:"url,omitempty"`
 }
-`)
+
+type Tool struct {
+	Version    string    `json:"version" yaml:"version"`
+	VersionURL string    `json:"versionURL" yaml:"versionURL"`
+	License    string    `json:"license" yaml:"license"`
+	LicenseURL string    `json:"licenseURL" yaml:"licenseURL"`
+	Registry   string    `json:"registry" yaml:"registry"`
+	Features   []Feature `json:"features" yaml:"features"`
+}
+
+type ToolMeta struct {
+	Version    string `yaml:"version"`
+	VersionURL string `yaml:"versionURL"`
+	License    string `yaml:"license"`
+	LicenseURL string `yaml:"licenseURL"`
+	Registry   string `yaml:"registry"`
+}
+
+type FeatureToolData struct {
+	Version string `yaml:"version"`
+	URL     string `yaml:"url,omitempty"`
+}
+
+type FeatureEntry struct {
+	Name  string                      `yaml:"name"`
+	Tools map[string]*FeatureToolData `yaml:"tools"`
+}
+
+type ToolsFile struct {
+	Tools    map[string]ToolMeta `yaml:"tools"`
+	Features []FeatureEntry      `yaml:"features"`
+}
 
 func main() {
-	ctx := context.Background()
+	data, err := os.ReadFile("tools/tools.yaml")
+	if err != nil {
+		panic("read tools/tools.yaml: " + err.Error())
+	}
+	var tf ToolsFile
+	if err := yaml.Unmarshal(data, &tf); err != nil {
+		panic("parse tools/tools.yaml: " + err.Error())
+	}
 
+	tools := make(map[string]Tool, len(tf.Tools))
+	for name, meta := range tf.Tools {
+		tools[name] = Tool{
+			Version:    meta.Version,
+			VersionURL: meta.VersionURL,
+			License:    meta.License,
+			LicenseURL: meta.LicenseURL,
+			Registry:   meta.Registry,
+		}
+	}
+	for _, f := range tf.Features {
+		for toolName, fd := range f.Tools {
+			t := tools[toolName]
+			t.Features = append(t.Features, Feature{Name: f.Name, Version: fd.Version, URL: fd.URL})
+			tools[toolName] = t
+		}
+	}
+
+	toolsJSON, err := json.MarshalIndent(tools, "", "  ")
+	if err != nil {
+		panic("marshal tools: " + err.Error())
+	}
+
+	ctx := context.Background()
 	rs := &jsonschema.Schema{}
 	if err := json.Unmarshal(schemaData, rs); err != nil {
 		panic("unmarshal schema: " + err.Error())
 	}
 
-	errs, err := rs.ValidateBytes(ctx, tools)
+	errs, err := rs.ValidateBytes(ctx, toolsJSON)
 	if err != nil {
 		panic(err)
 	}
@@ -266,22 +148,16 @@ func main() {
 		for _, e := range errs {
 			fmt.Println(e.Error())
 		}
+		os.Exit(1)
 	}
 
 	// File for Hugo to template the table
-	f, err := os.Create("data/tools.json")
-	if err != nil {
+	if err := os.WriteFile("data/tools.json", toolsJSON, 0644); err != nil {
 		panic(err)
 	}
-	defer f.Close()
-	f.Write(tools)
 
 	// allow access to https://cani.tf/tools.json
-	static, err := os.Create("static/tools.json")
-	if err != nil {
+	if err := os.WriteFile("static/tools.json", toolsJSON, 0644); err != nil {
 		panic(err)
 	}
-	defer static.Close()
-	static.Write(tools)
-
 }
