@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#1a2e0e"/>
+
+  <!-- Subtle grid pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff08" stroke-width="1"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Top accent bar -->
+  <rect width="1200" height="6" fill="#65a121"/>
+
+  <!-- Main title -->
+  <text x="600" y="230" font-family="monospace, 'Courier New'" font-size="120" font-weight="bold"
+        fill="#ffffff" text-anchor="middle" letter-spacing="-2">cani.tf</text>
+
+  <!-- Tagline -->
+  <text x="600" y="310" font-family="Seravek, 'Gill Sans Nova', Ubuntu, Calibri, sans-serif" font-size="34"
+        fill="#a3c97a" text-anchor="middle">Compare OpenTofu &amp; Terraform feature support</text>
+
+  <!-- Divider -->
+  <line x1="440" y1="360" x2="760" y2="360" stroke="#65a121" stroke-width="2" opacity="0.6"/>
+
+  <!-- Tool pills -->
+  <rect x="270" y="390" width="260" height="64" rx="12" fill="#2d4f16"/>
+  <text x="400" y="431" font-family="monospace, 'Courier New'" font-size="28" font-weight="bold"
+        fill="#a3c97a" text-anchor="middle">OpenTofu</text>
+
+  <text x="600" y="431" font-family="monospace, 'Courier New'" font-size="28"
+        fill="#55773a" text-anchor="middle">vs</text>
+
+  <rect x="670" y="390" width="260" height="64" rx="12" fill="#2d4f16"/>
+  <text x="800" y="431" font-family="monospace, 'Courier New'" font-size="28" font-weight="bold"
+        fill="#a3c97a" text-anchor="middle">Terraform</text>
+
+  <!-- Bottom URL -->
+  <text x="600" y="560" font-family="monospace, 'Courier New'" font-size="22"
+        fill="#55773a" text-anchor="middle">https://cani.tf</text>
+</svg>
