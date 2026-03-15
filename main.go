@@ -52,9 +52,13 @@ var schemaData = []byte(`{
               "version": {
                 "type": "string",
                 "maxLength": 4
+              },
+              "featureRequestURL": {
+                "type": "string",
+                "format": "uri"
               }
             },
-            "required": ["name", "version"]
+            "required": ["name"]
           }
         }
       },
@@ -64,9 +68,10 @@ var schemaData = []byte(`{
 }`)
 
 type Feature struct {
-	Name    string `json:"name" yaml:"name"`
-	Version string `json:"version" yaml:"version"`
-	URL     string `json:"url,omitempty" yaml:"url,omitempty"`
+	Name              string `json:"name" yaml:"name"`
+	Version           string `json:"version,omitempty" yaml:"version,omitempty"`
+	URL               string `json:"url,omitempty" yaml:"url,omitempty"`
+	FeatureRequestURL string `json:"featureRequestURL,omitempty" yaml:"featureRequestURL,omitempty"`
 }
 
 type Tool struct {
@@ -87,8 +92,9 @@ type ToolMeta struct {
 }
 
 type FeatureToolData struct {
-	Version string `yaml:"version"`
-	URL     string `yaml:"url,omitempty"`
+	Version           string `yaml:"version,omitempty"`
+	URL               string `yaml:"url,omitempty"`
+	FeatureRequestURL string `yaml:"featureRequestURL,omitempty"`
 }
 
 type FeatureEntry struct {
@@ -124,7 +130,7 @@ func main() {
 	for _, f := range tf.Features {
 		for toolName, fd := range f.Tools {
 			t := tools[toolName]
-			t.Features = append(t.Features, Feature{Name: f.Name, Version: fd.Version, URL: fd.URL})
+			t.Features = append(t.Features, Feature{Name: f.Name, Version: fd.Version, URL: fd.URL, FeatureRequestURL: fd.FeatureRequestURL})
 			tools[toolName] = t
 		}
 	}
