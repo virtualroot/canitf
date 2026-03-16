@@ -62,6 +62,8 @@ features:
         url: https://developer.hashicorp.com/terraform/language/functions/templatestring
   - name: Backend configuration using locals and variables
     tools:
+      terraform:
+        featureRequestURL: https://github.com/hashicorp/terraform/issues/13022
       opentofu:
         version: "1.8"
   - name: .tofu extension
@@ -100,6 +102,8 @@ features:
         url: https://developer.hashicorp.com/terraform/language/v1.10.x/upgrade-guides#s3-backend
   - name: OCI registry support
     tools:
+      terraform:
+        featureRequestURL: https://github.com/hashicorp/terraform/issues/31463
       opentofu:
         version: "1.10"
         url: https://opentofu.org/docs/cli/oci_registries/
@@ -136,6 +140,8 @@ features:
         url: https://developer.hashicorp.com/terraform/language/resources/ephemeral/write-only
   - name: Enabled for resources and modules
     tools:
+      terraform:
+        featureRequestURL: https://github.com/hashicorp/terraform/issues/21953
       opentofu:
         version: "1.11"
         url: https://opentofu.org/docs/language/meta-arguments/enabled/
@@ -144,18 +150,26 @@ features:
       terraform:
         version: "1.12"
         url: https://developer.hashicorp.com/terraform/plugin/framework/resources/identity
+      opentofu:
+        featureRequestURL: https://github.com/opentofu/opentofu/issues/2854
   - name: Backend implementation for Oracle Cloud Infrastructure (OCI) Object Storage
     tools:
       terraform:
         version: "1.12"
         url: https://developer.hashicorp.com/terraform/language/backend/oci
+      opentofu:
+        featureRequestURL: https://github.com/opentofu/opentofu/issues/1011
   - name: Search for resources in a declarative way
     tools:
       terraform:
         version: "1.14"
         url: https://developer.hashicorp.com/terraform/cli/commands/query
+      opentofu:
+        featureRequestURL: https://github.com/opentofu/opentofu/issues/3787
   - name: Actions for performing day-two operations
     tools:
       terraform:
         version: "1.14"
         url: https://developer.hashicorp.com/terraform/language/invoke-actions
+      opentofu:
+        featureRequestURL: https://github.com/opentofu/opentofu/issues/3309
