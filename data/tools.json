@@ -104,6 +104,22 @@
         "name": "Enabled for resources and modules",
         "version": "1.11",
         "url": "https://opentofu.org/docs/language/meta-arguments/enabled/"
+      },
+      {
+        "name": "Import via identity attribute",
+        "featureRequestURL": "https://github.com/opentofu/opentofu/issues/2854"
+      },
+      {
+        "name": "Backend implementation for Oracle Cloud Infrastructure (OCI) Object Storage",
+        "featureRequestURL": "https://github.com/opentofu/opentofu/issues/1011"
+      },
+      {
+        "name": "Search for resources in a declarative way",
+        "featureRequestURL": "https://github.com/opentofu/opentofu/issues/3787"
+      },
+      {
+        "name": "Actions for performing day-two operations",
+        "featureRequestURL": "https://github.com/opentofu/opentofu/issues/3309"
       }
     ]
   },
@@ -139,6 +155,10 @@
         "url": "https://developer.hashicorp.com/terraform/language/functions/templatestring"
       },
       {
+        "name": "Backend configuration using locals and variables",
+        "featureRequestURL": "https://github.com/hashicorp/terraform/issues/13022"
+      },
+      {
         "name": "Provider mocking",
         "version": "1.7"
       },
@@ -152,6 +172,10 @@
         "url": "https://developer.hashicorp.com/terraform/language/v1.10.x/upgrade-guides#s3-backend"
       },
       {
+        "name": "OCI registry support",
+        "featureRequestURL": "https://github.com/hashicorp/terraform/issues/31463"
+      },
+      {
         "name": "Ephemeral values and resources",
         "version": "1.10",
         "url": "https://developer.hashicorp.com/terraform/language/resources/ephemeral"
@@ -160,6 +184,10 @@
         "name": "Write-only attributes",
         "version": "1.11",
         "url": "https://developer.hashicorp.com/terraform/language/resources/ephemeral/write-only"
+      },
+      {
+        "name": "Enabled for resources and modules",
+        "featureRequestURL": "https://github.com/hashicorp/terraform/issues/21953"
       },
       {
         "name": "Import via identity attribute",
