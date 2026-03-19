@@ -24,23 +24,23 @@
           {{- /* Loop through Version */ -}}
           <tr>
             <td>Version</td>
-            {{ range $toolName, $toolData := .Site.Data.tools }}
+            {{ range $toolName, $toolData := .Site.Data.tools }}{{ if ne $toolName "lastUpdated" }}
             <td><a href="{{ $toolData.versionURL }}">{{ $toolData.version }}</a></td>
-            {{- end }}
+            {{- end }}{{ end }}
           </tr>
           {{- /* Loop through License */ -}}
           <tr>
             <td>License</td>
-            {{ range $toolName, $toolData := .Site.Data.tools }}
+            {{ range $toolName, $toolData := .Site.Data.tools }}{{ if ne $toolName "lastUpdated" }}
             <td><a href="{{ $toolData.licenseURL }}">{{ $toolData.license }}</a></td>
-            {{- end }}
+            {{- end }}{{ end }}
           </tr>
           {{- /* Loop through Registry */ -}}
           <tr>
             <td>Registry</td>
-            {{ range $toolName, $toolData := .Site.Data.tools }}
+            {{ range $toolName, $toolData := .Site.Data.tools }}{{ if ne $toolName "lastUpdated" }}
             <td><a href="{{ $toolData.registry }}">{{ $toolName }}</a></td>
-            {{- end }}
+            {{- end }}{{ end }}
           </tr>
 
           {{- /* Loop through OpenTofu features */ -}}
@@ -104,6 +104,7 @@
       </table>
     </div>
   </main>
+  <p class="updated">Last updated: {{ .Site.Data.tools.lastUpdated }}</p>
   <footer>
     <h2>About</h2>
     <p class="description">As time passes, OpenTofu and Terraform become more distant from each other. <a

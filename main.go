@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	"github.com/qri-io/jsonschema"
 	"gopkg.in/yaml.v3"
@@ -157,13 +158,24 @@ func main() {
 		os.Exit(1)
 	}
 
+	output := make(map[string]interface{}, len(tools)+1)
+	for k, v := range tools {
+		output[k] = v
+	}
+	output["lastUpdated"] = time.Now().UTC().Format("2006-01-02")
+
+	outputJSON, err := json.MarshalIndent(output, "", "  ")
+	if err != nil {
+		panic("marshal output: " + err.Error())
+	}
+
 	// File for Hugo to template the table
-	if err := os.WriteFile("data/tools.json", toolsJSON, 0644); err != nil {
+	if err := os.WriteFile("data/tools.json", outputJSON, 0644); err != nil {
 		panic(err)
 	}
 
 	// allow access to https://cani.tf/tools.json
-	if err := os.WriteFile("static/tools.json", toolsJSON, 0644); err != nil {
+	if err := os.WriteFile("static/tools.json", outputJSON, 0644); err != nil {
 		panic(err)
 	}
 }
