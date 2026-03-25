@@ -66,6 +66,14 @@ features:
         featureRequestURL: https://github.com/hashicorp/terraform/issues/13022
       opentofu:
         version: "1.8"
+  - name: Module source using locals and variables
+    tools:
+      terraform:
+        # From the v1.15-beta1 release notes
+        featureRequestURL: https://github.com/hashicorp/terraform/pull/38217
+      opentofu:
+        version: "1.8"
+        url: https://opentofu.org/docs/v1.8/language/modules/sources/#support-for-variable-and-local-evaluation 
   - name: .tofu extension
     tools:
       opentofu:
