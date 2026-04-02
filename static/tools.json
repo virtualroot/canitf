@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-18",
+  "lastUpdated": "2026-04-02",
   "opentofu": {
     "version": "1.11",
     "versionURL": "https://github.com/opentofu/opentofu/releases/latest",
@@ -43,6 +43,11 @@
       {
         "name": "Backend configuration using locals and variables",
         "version": "1.8"
+      },
+      {
+        "name": "Module source using locals and variables",
+        "version": "1.8",
+        "url": "https://opentofu.org/docs/v1.8/language/modules/sources/#support-for-variable-and-local-evaluation"
       },
       {
         "name": ".tofu extension",
@@ -158,6 +163,10 @@
       {
         "name": "Backend configuration using locals and variables",
         "featureRequestURL": "https://github.com/hashicorp/terraform/issues/13022"
+      },
+      {
+        "name": "Module source using locals and variables",
+        "featureRequestURL": "https://github.com/hashicorp/terraform/pull/38217"
       },
       {
         "name": "Provider mocking",
