@@ -1,7 +1,7 @@
 {
   "lastUpdated": "2026-05-25",
   "opentofu": {
-    "version": "1.11",
+    "version": "1.12",
     "versionURL": "https://github.com/opentofu/opentofu/releases/latest",
     "license": "MPL-2.0",
     "licenseURL": "https://github.com/opentofu/opentofu/blob/main/LICENSE",
@@ -110,6 +110,25 @@
         "name": "Enabled for resources and modules",
         "version": "1.11",
         "url": "https://opentofu.org/docs/language/meta-arguments/enabled/"
+      },
+      {
+        "name": "Dynamic prevent_destroy",
+        "version": "1.12",
+        "url": "https://opentofu.org/blog/opentofu-1-12-0/#prevent_destroy-can-now-be-set-dynamically"
+      },
+      {
+        "name": "`destroy` lifecycle meta-argument",
+        "version": "1.12",
+        "url": "https://opentofu.org/docs/language/resources/syntax/"
+      },
+      {
+        "name": "Const input variables",
+        "version": "1.12",
+        "url": "https://opentofu.org/docs/language/values/variables/"
+      },
+      {
+        "name": "language configuration block",
+        "version": "1.12"
       },
       {
         "name": "Import via identity attribute",
