@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-05-25",
   "opentofu": {
     "version": "1.11",
     "versionURL": "https://github.com/opentofu/opentofu/releases/latest",
@@ -130,7 +130,7 @@
     ]
   },
   "terraform": {
-    "version": "1.14",
+    "version": "1.15",
     "versionURL": "https://github.com/hashicorp/terraform/releases/latest",
     "license": "BUSL-1.1",
     "licenseURL": "https://github.com/hashicorp/terraform/blob/main/LICENSE",
@@ -166,7 +166,8 @@
       },
       {
         "name": "Module source using locals and variables",
-        "featureRequestURL": "https://github.com/hashicorp/terraform/pull/38217"
+        "version": "1.15",
+        "url": "https://developer.hashicorp.com/terraform/language/modules/sources"
       },
       {
         "name": "Provider mocking",
@@ -218,6 +219,21 @@
         "name": "Actions for performing day-two operations",
         "version": "1.14",
         "url": "https://developer.hashicorp.com/terraform/language/invoke-actions"
+      },
+      {
+        "name": "Variable and output deprecation",
+        "version": "1.15",
+        "url": "https://developer.hashicorp.com/terraform/language/values/variables#deprecated"
+      },
+      {
+        "name": "Output type constraints",
+        "version": "1.15",
+        "url": "https://developer.hashicorp.com/terraform/language/values/outputs#type"
+      },
+      {
+        "name": "convert() function",
+        "version": "1.15",
+        "url": "https://developer.hashicorp.com/terraform/language/functions/convert"
       }
     ]
   }

@@ -6,7 +6,7 @@ tools:
     licenseURL: https://github.com/opentofu/opentofu/blob/main/LICENSE
     registry: https://search.opentofu.org/
   terraform:
-    version: "1.14"
+    version: "1.15"
     versionURL: https://github.com/hashicorp/terraform/releases/latest
     license: BUSL-1.1
     licenseURL: https://github.com/hashicorp/terraform/blob/main/LICENSE
@@ -69,8 +69,8 @@ features:
   - name: Module source using locals and variables
     tools:
       terraform:
-        # From the v1.15-beta1 release notes
-        featureRequestURL: https://github.com/hashicorp/terraform/pull/38217
+        version: "1.15"
+        url: https://developer.hashicorp.com/terraform/language/modules/sources
       opentofu:
         version: "1.8"
         url: https://opentofu.org/docs/v1.8/language/modules/sources/#support-for-variable-and-local-evaluation 
@@ -181,3 +181,18 @@ features:
         url: https://developer.hashicorp.com/terraform/language/invoke-actions
       opentofu:
         featureRequestURL: https://github.com/opentofu/opentofu/issues/3309
+  - name: Variable and output deprecation
+    tools:
+      terraform:
+        version: "1.15"
+        url: https://developer.hashicorp.com/terraform/language/values/variables#deprecated
+  - name: Output type constraints
+    tools:
+      terraform:
+        version: "1.15"
+        url: https://developer.hashicorp.com/terraform/language/values/outputs#type
+  - name: convert() function
+    tools:
+      terraform:
+        version: "1.15"
+        url: https://developer.hashicorp.com/terraform/language/functions/convert
