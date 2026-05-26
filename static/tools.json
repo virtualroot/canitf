@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-25",
+  "lastUpdated": "2026-05-26",
   "opentofu": {
     "version": "1.12",
     "versionURL": "https://github.com/opentofu/opentofu/releases/latest",
@@ -132,7 +132,7 @@
       },
       {
         "name": "Import via identity attribute",
-        "featureRequestURL": "https://github.com/opentofu/opentofu/issues/2854"
+        "version": "1.12"
       },
       {
         "name": "Backend implementation for Oracle Cloud Infrastructure (OCI) Object Storage",
@@ -145,6 +145,19 @@
       {
         "name": "Actions for performing day-two operations",
         "featureRequestURL": "https://github.com/opentofu/opentofu/issues/3309"
+      },
+      {
+        "name": "Variable and output deprecation",
+        "version": "1.10",
+        "url": "https://opentofu.org/docs/language/values/outputs/#deprecated--marking-output-as-deprecated"
+      },
+      {
+        "name": "Output type constraints",
+        "featureRequestURL": "https://github.com/opentofu/opentofu/issues/2831"
+      },
+      {
+        "name": "convert() function",
+        "featureRequestURL": "https://github.com/opentofu/opentofu/issues/2630"
       }
     ]
   },
@@ -197,6 +210,14 @@
         "version": "1.7"
       },
       {
+        "name": "Provider iteration with for_each",
+        "featureRequestURL": "https://github.com/hashicorp/terraform/issues/19932"
+      },
+      {
+        "name": "-exclude flag",
+        "featureRequestURL": "https://github.com/hashicorp/terraform/issues/2253"
+      },
+      {
         "name": "S3 native state locking",
         "version": "1.10",
         "url": "https://developer.hashicorp.com/terraform/language/v1.10.x/upgrade-guides#s3-backend"
@@ -218,6 +239,19 @@
       {
         "name": "Enabled for resources and modules",
         "featureRequestURL": "https://github.com/hashicorp/terraform/issues/21953"
+      },
+      {
+        "name": "Dynamic prevent_destroy",
+        "featureRequestURL": "https://github.com/hashicorp/terraform/issues/22544"
+      },
+      {
+        "name": "`destroy` lifecycle meta-argument",
+        "featureRequestURL": "https://github.com/hashicorp/terraform/issues/34439"
+      },
+      {
+        "name": "Const input variables",
+        "version": "1.15",
+        "url": "https://developer.hashicorp.com/terraform/language/block/variable#const"
       },
       {
         "name": "Import via identity attribute",

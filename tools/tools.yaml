@@ -92,11 +92,15 @@ features:
         version: "1.7"
   - name: Provider iteration with for_each
     tools:
+      terraform:
+        featureRequestURL: https://github.com/hashicorp/terraform/issues/19932
       opentofu:
         version: "1.9"
         url: https://opentofu.org/docs/intro/whats-new/#provider-iteration-for_each
   - name: -exclude flag
     tools:
+      terraform:
+        featureRequestURL: https://github.com/hashicorp/terraform/issues/2253
       opentofu:
         version: "1.9"
         url: https://opentofu.org/docs/intro/whats-new/#the--exclude-flag
@@ -155,16 +159,23 @@ features:
         url: https://opentofu.org/docs/language/meta-arguments/enabled/
   - name: Dynamic prevent_destroy
     tools:
+      terraform:
+        featureRequestURL: https://github.com/hashicorp/terraform/issues/22544
       opentofu:
         version: "1.12"
         url: https://opentofu.org/blog/opentofu-1-12-0/#prevent_destroy-can-now-be-set-dynamically
   - name: "`destroy` lifecycle meta-argument"
     tools:
+      terraform:
+        featureRequestURL: https://github.com/hashicorp/terraform/issues/34439
       opentofu:
         version: "1.12"
         url: https://opentofu.org/docs/language/resources/syntax/
   - name: Const input variables
     tools:
+      terraform:
+        version: "1.15"
+        url: https://developer.hashicorp.com/terraform/language/block/variable#const
       opentofu:
         version: "1.12"
         url: https://opentofu.org/docs/language/values/variables/
@@ -178,7 +189,7 @@ features:
         version: "1.12"
         url: https://developer.hashicorp.com/terraform/plugin/framework/resources/identity
       opentofu:
-        featureRequestURL: https://github.com/opentofu/opentofu/issues/2854
+        version: "1.12"
   - name: Backend implementation for Oracle Cloud Infrastructure (OCI) Object Storage
     tools:
       terraform:
@@ -205,13 +216,20 @@ features:
       terraform:
         version: "1.15"
         url: https://developer.hashicorp.com/terraform/language/values/variables#deprecated
+      opentofu:
+        version: "1.10"
+        url: https://opentofu.org/docs/language/values/outputs/#deprecated--marking-output-as-deprecated
   - name: Output type constraints
     tools:
       terraform:
         version: "1.15"
         url: https://developer.hashicorp.com/terraform/language/values/outputs#type
+      opentofu:
+        featureRequestURL: https://github.com/opentofu/opentofu/issues/2831
   - name: convert() function
     tools:
       terraform:
         version: "1.15"
         url: https://developer.hashicorp.com/terraform/language/functions/convert
+      opentofu:
+        featureRequestURL: https://github.com/opentofu/opentofu/issues/2630
