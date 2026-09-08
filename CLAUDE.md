@@ -32,6 +32,8 @@ Hugo version is pinned via `.tool-versions` (hugo 0.135.0). Install with `asdf i
 
 Each tool entry has: `version`, `versionURL`, `license`, `licenseURL`, `registry`, and `features[]`. Each feature has `name` (required), and optional `version`, `url`, and `featureRequestURL`. Feature names are matched by string equality across tools to build the comparison table — a feature present in one tool but not the other renders as `-`. A `featureRequestURL` with no `version` renders as a `?` link.
 
+`main.go` also injects a top-level `lastUpdated` string (ISO date) into `data/tools.json` and `static/tools.json`. This means `.Site.Data.tools` contains both tool objects and this string key. Any Hugo template that `range`s over `.Site.Data.tools` must guard against it: `{{ if ne $toolName "lastUpdated" }}`.
+
 ## Deployment
 
 Pushing to `main` triggers `.github/workflows/hugo.yml`, which builds with Hugo and deploys to GitHub Pages automatically.
