@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-26",
+  "lastUpdated": "2026-09-08",
   "opentofu": {
     "version": "1.12",
     "versionURL": "https://github.com/opentofu/opentofu/releases/latest",
@@ -158,11 +158,15 @@
       {
         "name": "convert() function",
         "featureRequestURL": "https://github.com/opentofu/opentofu/issues/2630"
+      },
+      {
+        "name": "Import blocks inside modules",
+        "featureRequestURL": "https://github.com/opentofu/opentofu/issues/1914"
       }
     ]
   },
   "terraform": {
-    "version": "1.15",
+    "version": "1.16",
     "versionURL": "https://github.com/hashicorp/terraform/releases/latest",
     "license": "BUSL-1.1",
     "licenseURL": "https://github.com/hashicorp/terraform/blob/main/LICENSE",
@@ -246,7 +250,8 @@
       },
       {
         "name": "`destroy` lifecycle meta-argument",
-        "featureRequestURL": "https://github.com/hashicorp/terraform/issues/34439"
+        "version": "1.16",
+        "url": "https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#destroy"
       },
       {
         "name": "Const input variables",
@@ -287,6 +292,11 @@
         "name": "convert() function",
         "version": "1.15",
         "url": "https://developer.hashicorp.com/terraform/language/functions/convert"
+      },
+      {
+        "name": "Import blocks inside modules",
+        "version": "1.16",
+        "url": "https://developer.hashicorp.com/terraform/language/import"
       }
     ]
   }

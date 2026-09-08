@@ -6,7 +6,7 @@ tools:
     licenseURL: https://github.com/opentofu/opentofu/blob/main/LICENSE
     registry: https://search.opentofu.org/
   terraform:
-    version: "1.15"
+    version: "1.16"
     versionURL: https://github.com/hashicorp/terraform/releases/latest
     license: BUSL-1.1
     licenseURL: https://github.com/hashicorp/terraform/blob/main/LICENSE
@@ -167,7 +167,8 @@ features:
   - name: "`destroy` lifecycle meta-argument"
     tools:
       terraform:
-        featureRequestURL: https://github.com/hashicorp/terraform/issues/34439
+        version: "1.16"
+        url: https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#destroy
       opentofu:
         version: "1.12"
         url: https://opentofu.org/docs/language/resources/syntax/
@@ -233,3 +234,10 @@ features:
         url: https://developer.hashicorp.com/terraform/language/functions/convert
       opentofu:
         featureRequestURL: https://github.com/opentofu/opentofu/issues/2630
+  - name: Import blocks inside modules
+    tools:
+      terraform:
+        version: "1.16"
+        url: https://developer.hashicorp.com/terraform/language/import
+      opentofu:
+        featureRequestURL: https://github.com/opentofu/opentofu/issues/1914
