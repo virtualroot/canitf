@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-09-08",
+  "lastUpdated": "2026-10-07",
   "opentofu": {
-    "version": "1.12",
+    "version": "1.13",
     "versionURL": "https://github.com/opentofu/opentofu/releases/latest",
     "license": "MPL-2.0",
     "licenseURL": "https://github.com/opentofu/opentofu/blob/main/LICENSE",
@@ -157,11 +157,22 @@
       },
       {
         "name": "convert() function",
-        "featureRequestURL": "https://github.com/opentofu/opentofu/issues/2630"
+        "version": "1.13",
+        "url": "https://opentofu.org/docs/language/functions/convert/"
       },
       {
         "name": "Import blocks inside modules",
         "featureRequestURL": "https://github.com/opentofu/opentofu/issues/1914"
+      },
+      {
+        "name": "assume...() functions for unknown value hints",
+        "version": "1.13",
+        "url": "https://opentofu.org/docs/language/functions/assume_family/"
+      },
+      {
+        "name": "Symbol libraries",
+        "version": "1.13",
+        "url": "https://opentofu.org/docs/v1.13/language/symbol-libraries/"
       }
     ]
   },
