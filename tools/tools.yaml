@@ -1,6 +1,6 @@
 tools:
   opentofu:
-    version: "1.12"
+    version: "1.13"
     versionURL: https://github.com/opentofu/opentofu/releases/latest
     license: MPL-2.0
     licenseURL: https://github.com/opentofu/opentofu/blob/main/LICENSE
@@ -233,7 +233,8 @@ features:
         version: "1.15"
         url: https://developer.hashicorp.com/terraform/language/functions/convert
       opentofu:
-        featureRequestURL: https://github.com/opentofu/opentofu/issues/2630
+        version: "1.13"
+        url: https://opentofu.org/docs/language/functions/convert/
   - name: Import blocks inside modules
     tools:
       terraform:
@@ -241,3 +242,13 @@ features:
         url: https://developer.hashicorp.com/terraform/language/import
       opentofu:
         featureRequestURL: https://github.com/opentofu/opentofu/issues/1914
+  - name: "assume...() functions for unknown value hints"
+    tools:
+      opentofu:
+        version: "1.13"
+        url: https://opentofu.org/docs/language/functions/assume_family/
+  - name: Symbol libraries
+    tools:
+      opentofu:
+        version: "1.13"
+        url: https://opentofu.org/docs/v1.13/language/symbol-libraries/
