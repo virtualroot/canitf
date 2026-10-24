@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-07",
+  "lastUpdated": "2026-10-24",
   "opentofu": {
     "version": "1.13",
     "versionURL": "https://github.com/opentofu/opentofu/releases/latest",
@@ -50,6 +50,10 @@
         "url": "https://opentofu.org/docs/v1.8/language/modules/sources/#support-for-variable-and-local-evaluation"
       },
       {
+        "name": "Provider requirements using locals and variables",
+        "featureRequestURL": "https://github.com/opentofu/opentofu/issues/1850"
+      },
+      {
         "name": ".tofu extension",
         "version": "1.8"
       },
@@ -70,6 +74,10 @@
         "name": "-exclude flag",
         "version": "1.9",
         "url": "https://opentofu.org/docs/intro/whats-new/#the--exclude-flag"
+      },
+      {
+        "name": "-minimal-refresh flag",
+        "featureRequestURL": "https://github.com/opentofu/opentofu/issues/4372"
       },
       {
         "name": "S3 native state locking",
@@ -147,6 +155,10 @@
         "featureRequestURL": "https://github.com/opentofu/opentofu/issues/3309"
       },
       {
+        "name": "Terraform Policy",
+        "featureRequestURL": "https://github.com/opentofu/opentofu/issues/370"
+      },
+      {
         "name": "Variable and output deprecation",
         "version": "1.10",
         "url": "https://opentofu.org/docs/language/values/outputs/#deprecated--marking-output-as-deprecated"
@@ -177,7 +189,7 @@
     ]
   },
   "terraform": {
-    "version": "1.16",
+    "version": "1.17",
     "versionURL": "https://github.com/hashicorp/terraform/releases/latest",
     "license": "BUSL-1.1",
     "licenseURL": "https://github.com/hashicorp/terraform/blob/main/LICENSE",
@@ -217,6 +229,11 @@
         "url": "https://developer.hashicorp.com/terraform/language/modules/sources"
       },
       {
+        "name": "Provider requirements using locals and variables",
+        "version": "1.17",
+        "url": "https://developer.hashicorp.com/terraform/language/providers/requirements"
+      },
+      {
         "name": "Provider mocking",
         "version": "1.7"
       },
@@ -231,6 +248,11 @@
       {
         "name": "-exclude flag",
         "featureRequestURL": "https://github.com/hashicorp/terraform/issues/2253"
+      },
+      {
+        "name": "-minimal-refresh flag",
+        "version": "1.17",
+        "url": "https://developer.hashicorp.com/terraform/cli/commands/plan#minimal-refresh"
       },
       {
         "name": "S3 native state locking",
@@ -288,6 +310,11 @@
         "name": "Actions for performing day-two operations",
         "version": "1.14",
         "url": "https://developer.hashicorp.com/terraform/language/invoke-actions"
+      },
+      {
+        "name": "Terraform Policy",
+        "version": "1.17",
+        "url": "https://developer.hashicorp.com/terraform/policy"
       },
       {
         "name": "Variable and output deprecation",

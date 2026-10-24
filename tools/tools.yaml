@@ -6,7 +6,7 @@ tools:
     licenseURL: https://github.com/opentofu/opentofu/blob/main/LICENSE
     registry: https://search.opentofu.org/
   terraform:
-    version: "1.16"
+    version: "1.17"
     versionURL: https://github.com/hashicorp/terraform/releases/latest
     license: BUSL-1.1
     licenseURL: https://github.com/hashicorp/terraform/blob/main/LICENSE
@@ -74,6 +74,13 @@ features:
       opentofu:
         version: "1.8"
         url: https://opentofu.org/docs/v1.8/language/modules/sources/#support-for-variable-and-local-evaluation 
+  - name: Provider requirements using locals and variables
+    tools:
+      terraform:
+        version: "1.17"
+        url: https://developer.hashicorp.com/terraform/language/providers/requirements
+      opentofu:
+        featureRequestURL: https://github.com/opentofu/opentofu/issues/1850
   - name: .tofu extension
     tools:
       opentofu:
@@ -104,6 +111,13 @@ features:
       opentofu:
         version: "1.9"
         url: https://opentofu.org/docs/intro/whats-new/#the--exclude-flag
+  - name: -minimal-refresh flag
+    tools:
+      terraform:
+        version: "1.17"
+        url: https://developer.hashicorp.com/terraform/cli/commands/plan#minimal-refresh
+      opentofu:
+        featureRequestURL: https://github.com/opentofu/opentofu/issues/4372
   - name: S3 native state locking
     tools:
       opentofu:
@@ -212,6 +226,13 @@ features:
         url: https://developer.hashicorp.com/terraform/language/invoke-actions
       opentofu:
         featureRequestURL: https://github.com/opentofu/opentofu/issues/3309
+  - name: Terraform Policy
+    tools:
+      terraform:
+        version: "1.17"
+        url: https://developer.hashicorp.com/terraform/policy
+      opentofu:
+        featureRequestURL: https://github.com/opentofu/opentofu/issues/370
   - name: Variable and output deprecation
     tools:
       terraform:
